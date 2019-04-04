@@ -1,0 +1,103 @@
+######################################################################
+#   												  #			     #
+#   .__                                               #	 Created by  #
+#   |  | ______ ______   ___________  _____   ______  #    Tobi      #
+#   |  | \____ \\____ \_/ __ \_  __ \/     \ /  ___/  #              #
+#   |  |_|  |_> >  |_> >  ___/|  | \/  Y Y  \\___ \   ################
+#  /\____/   __/|   __/ \___  >__|  |__|_|  /____  >                 #
+#  \/    |__|   |__|        \/            \/     \/ 			     #
+# .__                              __      _____.__.__               #
+# |__| _____ ______   ____________/  |_  _/ ____\__|  |   ____       #
+# |  |/     \\____ \ /  _ \_  __ \   __\ \   __\|  |  | _/ __ \      #
+# |  |  Y Y  \  |_> >  <_> )  | \/|  |    |  |  |  |  |_\  ___/      #
+# |__|__|_|  /   __/ \____/|__|   |__|    |__|  |__|____/\___  >     #
+#          \/|__|                                            \/      #
+#																     #
+######################################################################
+
+
+# Create groups:
+# players
+/lp creategroup trusted
+/lp creategroup vip
+/lp creategroup vip+
+
+# staff 
+/lp creategroup helper
+/lp creategroup moderator
+/lp creategroup developer
+/lp creategroup administrator
+/lp creategroup owner
+
+#debug
+/lp creategroup *
+
+
+# Create tracks:
+/lp createtrack all
+/lp createtrack players
+/lp createtrack staff
+
+
+# Setup tracks:
+# all
+/lp track all insert default 1
+/lp track all insert trusted 2
+/lp track all insert vip 3
+/lp track all insert vip+ 4
+/lp track all insert helper 5
+/lp track all insert moderator 6
+/lp track all insert developer 7
+/lp track all insert administrator 8
+/lp track all insert owner 9
+
+# player
+/lp track players insert default 1
+/lp track players insert trusted 2
+/lp track players insert vip 3
+/lp track players insert vip+ 4
+
+# staff
+/lp track staff insert helper 1
+/lp track staff insert moderator 2
+/lp track staff insert developer 3
+/lp track staff insert administrator 4
+/lp track staff insert owner 5
+
+
+# Setup weights:
+# players
+/lp group default setweight 0
+/lp group trusted setweight 5
+/lp group vip setweight 10
+/lp group vip+ setweight 15
+
+# staff
+/lp group helper setweight 80
+/lp group moderator setweight 85
+/lp group developer setweight 90
+/lp group administrator setweight 95
+/lp group owner setweight 100
+
+# debug
+/lp group * setweight 200
+
+
+# Setup parents:
+# players
+/lp group trusted parent add default
+/lp group vip parent add trusted
+/lp group vip+ parent add vip
+
+# staff
+/lp group helper parent add vip+
+/lp group moderator parent add helper
+/lp group developer parent add moderator
+/lp group administrator parent add developer
+/lp group owner parent add administrator
+
+
+# Setup permissions:
+# debug
+/lp group * permission set * true
+

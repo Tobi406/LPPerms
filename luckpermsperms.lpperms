@@ -1,0 +1,56 @@
+######################################################################
+#   												  #			     #
+#   .__                                               #	 Created by  #
+#   |  | ______ ______   ___________  _____   ______  #    Tobi      #
+#   |  | \____ \\____ \_/ __ \_  __ \/     \ /  ___/  #              #
+#   |  |_|  |_> >  |_> >  ___/|  | \/  Y Y  \\___ \   ################
+#  /\____/   __/|   __/ \___  >__|  |__|_|  /____  >                 #
+#  \/    |__|   |__|        \/            \/     \/ 			     #
+# .__                              __      _____.__.__               #
+# |__| _____ ______   ____________/  |_  _/ ____\__|  |   ____       #
+# |  |/     \\____ \ /  _ \_  __ \   __\ \   __\|  |  | _/ __ \      #
+# |  |  Y Y  \  |_> >  <_> )  | \/|  |    |  |  |  |  |_\  ___/      #
+# |__|__|_|  /   __/ \____/|__|   |__|    |__|  |__|____/\___  >     #
+#          \/|__|                                            \/      #
+#																     #
+######################################################################
+
+
+# Setup permissions:
+# staff
+# general
+/lp group moderator permission set luckperms.user.info true
+/lp group moderator permission set luckperms.user.info.* true
+/lp group moderator permission set luckperms.group.info true
+/lp group moderator permission set luckperms.group.info.* true
+
+# listmembers
+/lp group moderator permission set luckperms.group.listmembers true
+/lp group moderator permission set luckperms.group.listmembers.* true
+
+# listgroups
+/lp group moderator permission set luckperms.user.parent.info true
+/lp group moderator permission set luckperms.user.parent.info.* true
+
+# showtracks
+/lp group moderator permission set luckperms.user.showtracks true
+/lp group moderator permission set luckperms.user.showtracks.* true
+/lp group moderator permission set luckperms.group.showtracks true
+/lp group moderator permission set luckperms.group.showtracks.* true
+
+# promote players
+/lp group moderator permission set luckperms.user.promote true
+/lp group moderator permission set luckperms.user.promote.modify.others
+/lp group moderator permission set luckperms.user.promote.usecontext.* true
+/lp group moderlpator permission set luckperms.user.promote.players.* true
+
+# demote players
+/lp group moderator permission set luckperms.user.demote true
+/lp group moderator permission set luckperms.user.demote.modify.other true
+/lp group moderator permission set luckperms.user.demote.usecontext.* true
+/lp group moderator permission set luckperms.user.demote.players.* true
+/lp group moderator permission set luckperms.user.demote true
+/lp group moderator permission set luckperms.user.demote true
+
+/lp group developer permission set luckperms.log.*
+/lp group administrator permission set luckperms.* true

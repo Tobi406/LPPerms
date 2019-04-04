@@ -1,0 +1,44 @@
+######################################################################
+#   												  #			     #
+#   .__                                               #	 Created by  #
+#   |  | ______ ______   ___________  _____   ______  #    Tobi      #
+#   |  | \____ \\____ \_/ __ \_  __ \/     \ /  ___/  #              #
+#   |  |_|  |_> >  |_> >  ___/|  | \/  Y Y  \\___ \   ################
+#  /\____/   __/|   __/ \___  >__|  |__|_|  /____  >                 #
+#  \/    |__|   |__|        \/            \/     \/ 			     #
+# .__                              __      _____.__.__               #
+# |__| _____ ______   ____________/  |_  _/ ____\__|  |   ____       #
+# |  |/     \\____ \ /  _ \_  __ \   __\ \   __\|  |  | _/ __ \      #
+# |  |  Y Y  \  |_> >  <_> )  | \/|  |    |  |  |  |  |_\  ___/      #
+# |__|__|_|  /   __/ \____/|__|   |__|    |__|  |__|____/\___  >     #
+#          \/|__|                                            \/      #
+#																     #
+######################################################################
+
+
+# Delete groups:
+# players
+/lp deletegroup trusted
+/lp deletegroup vip
+/lp deletegroup vip+
+
+# staff
+/lp deletegroup helper
+/lp deletegroup moderator
+/lp deletegroup developer
+/lp deletegroup administrator
+/lp deletegroup owner
+
+# debug
+/lp deletegroup *
+
+
+# Delete tracks:
+/lp deletetrack all
+/lp deletetrack players
+/lp deletetrack staff
+
+
+# Clear default:
+/lp group default clear
+
